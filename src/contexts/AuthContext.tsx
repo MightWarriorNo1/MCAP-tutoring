@@ -84,6 +84,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const userWithLastActive = { ...foundUser, lastActive: new Date() };
       setUser(userWithLastActive);
       localStorage.setItem('mcat-prep-user', JSON.stringify(userWithLastActive));
+      
     } else {
       throw new Error('Invalid credentials');
     }
